@@ -1,0 +1,18 @@
+# Environment and sensitive files
+.env
+.env.*
+
+# IDE settings
+.vscode/
+.idea/
+
+# Dependencies
+vendor/
+node_modules/
+
+# Temporary files
+*.log
+*.tmp
+
+# Local database test file
+test_connection.php

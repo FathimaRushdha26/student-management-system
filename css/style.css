@@ -1,0 +1,524 @@
+
+/* =========================
+   1. Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   2. Dashboard Layout
+========================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   3. Sidebar
+========================= */
+
+.sidebar {
+    width: 250px;
+    background: #172554;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.logo span {
+    color: #60a5fa;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #bfdbfe;
+}
+
+.sidebar nav {
+    margin-top: 50px;
+}
+
+.nav-link {
+    display: block;
+    color: #cbd5e1;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #2563eb;
+    color: white;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* =========================
+   4. Main Content
+========================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 35px;
+}
+
+
+/* =========================
+   5. Top Header
+========================= */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.top-header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.top-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================
+   6. Buttons
+========================= */
+
+.add-btn {
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   7. Statistics Cards
+========================= */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    background: #dbeafe;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.stat-card h2 {
+    font-size: 26px;
+    color: #1e293b;
+}
+
+
+/* =========================
+   8. Student Table Section
+========================= */
+
+.table-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.table-header {
+    margin-bottom: 25px;
+}
+
+.table-header h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.table-header p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 700px;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 16px 12px;
+    font-weight: 600;
+}
+
+td {
+    padding: 18px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+.empty-message {
+    text-align: center;
+    color: #64748b;
+    padding: 30px;
+}
+
+
+/* =========================
+   9. Action Buttons
+========================= */
+
+.actions {
+    white-space: nowrap;
+}
+
+.edit-btn,
+.delete-btn {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.edit-btn {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.edit-btn:hover {
+    background: #bfdbfe;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+
+/* =========================
+   10. Footer
+========================= */
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 35px;
+}
+
+
+/* =========================
+   11. Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 190px;
+        padding: 20px 12px;
+    }
+
+    .main-content {
+        padding: 22px 15px;
+    }
+
+    .top-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .sidebar nav {
+        margin-top: 20px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .nav-link {
+        margin-bottom: 0;
+    }
+
+    .main-content {
+        padding: 20px 12px;
+    }
+
+    .table-section {
+        padding: 15px;
+    }
+}
+
+/* Search Form */
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-form {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.search-form input {
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+    font-size: 13px;
+    min-width: 220px;
+}
+
+.search-form input:focus {
+    border-color: #2563eb;
+}
+
+.search-form button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background: #e2e8f0;
+    color: #334155;
+    padding: 11px 14px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+/* =========================
+   Add Student Form
+========================= */
+
+.form-section {
+    max-width: 850px;
+}
+
+.form-card {
+    background: white;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+}
+
+.form-card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.form-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.student-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input {
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.form-actions button {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.alert {
+    padding: 13px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alert.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.alert.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+@media (max-width: 600px) {
+    .student-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+/* Dashboard Statistics Improvements */
+
+.stats-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.latest-name {
+    font-size: 18px !important;
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 1100px) {
+    .stats-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
